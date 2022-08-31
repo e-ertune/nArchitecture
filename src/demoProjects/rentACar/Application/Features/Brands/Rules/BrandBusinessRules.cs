@@ -22,5 +22,13 @@ namespace Application.Features.Brands.Rules
                 throw new BusinessException("Brand name already exists.");
             }
         }
+
+        public void BrandShouldExistWhenRequested(Brand? brand)
+        {
+            if (brand == null)
+            {
+                throw new BusinessException("Requested Brand does not exist.");
+            }
+        }
     }
 }
